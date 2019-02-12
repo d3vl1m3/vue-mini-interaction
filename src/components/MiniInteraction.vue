@@ -8,11 +8,11 @@
                   <span class="icons__outer-container">
                       <span class="icons__inner-container">
 
-                          <span class="dots-icon__container--arrow arrow-icon">
+                          <span class="dots-icon__container--arrow">
                               <i class="fa fa-angle-up"></i>
                           </span>
 
-                          <span class="dots-icon__container--dots dot-icons">
+                          <span class="dots-icon__container--dots">
                               <i class="dots-icon__dot fa fa-circle"></i>
                               <i class="dots-icon__dot fa fa-circle"></i>
                               <i class="dots-icon__dot fa fa-circle"></i>
