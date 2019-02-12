@@ -27,8 +27,8 @@
 
               </button>
 
-              <div class="actions-container">
-                  <div class="actions__outer-container" v-bind:class="{'active': clicked, 'inactive': !clicked }">
+              <div class="actions-container" v-bind:class="{'active': clicked, 'inactive': !clicked }">
+                  <div class="actions__outer-container">
                       <div class="actions__inner-container actions-container-animation">
                             <div class="actions__top-row">
                                 <ul class="top-actions__list">
@@ -83,7 +83,7 @@
       name: 'MiniInteraction',
       data() {
         return {
-            clicked: true,
+            clicked: false,
             buttonAnimation: 'normal',
         }
       },
