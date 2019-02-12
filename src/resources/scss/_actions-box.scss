@@ -1,9 +1,25 @@
+.actions-container {
+  position: relative;
+}
+
+
 .actions {
+
+  &__outer-container {
+    position: absolute;
+    display: flex;
+    width: 100%;
+  }
+
   &__inner-container {
-    margin-top: 1.2rem;
+    width: 100%;
+    margin-top: 150px;
+    opacity: 0;
     -webkit-box-shadow: 0 8px 8px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 0 8px 8px 1px rgba(0,0,0,0.75);
     box-shadow: 0 8px 8px 1px rgba(0,0,0,0.75);
+    z-index: 1000;
+    background: white;
   }
 }
 

@@ -27,17 +27,10 @@
       flex-grow: 1;
       justify-content: center;
       position: absolute;
-      top: 0;
-      -webkit-transition: top 0.3s ease 0.2s;
-      -moz-transition: top 0.3s ease 0.2s;
-      -ms-transition: top 0.3s ease 0.2s;
-      -o-transition: top 0.3s ease 0.2s;
-      transition: top 0.3s ease 0.2s;
     }
 
     &--arrow {
       font-size: 1.1rem;
-      top: -100%;
       color: #d9d9d9;
     }
 
