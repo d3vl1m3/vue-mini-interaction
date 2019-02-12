@@ -90,14 +90,6 @@ export default {
     $purple: #cd0274;
     $blue: #04a9fe;
 
-
-    /*Animations*/
-    @keyframes DotStart {
-        from{align-self: initial}
-        to{align-self: start}
-    }
-
-
     button {
         cursor: pointer;
     }
@@ -261,16 +253,6 @@ export default {
 
             }
         }
-    }
-
-    @keyframes DotsContainer {
-        from{top:0;}
-        to{top:100%;}
-    }
-
-    @keyframes DotsContainerReverse {
-        from{top:100%;}
-        to{top:0;}
     }
 
     .bottom-actions {
