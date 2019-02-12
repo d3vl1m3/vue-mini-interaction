@@ -51,38 +51,13 @@ $dot-reverse-delay: 0.4s;
   position: relative;
 }
 
+///////
+// Container hidden animations
+///////
 .inactive {
-  .top-row-animations {
-    background-color: grey;
-    transition: background-color 0.5s ease;
-  }
-
-  &.actions-container {
-    left: 1000000px; // remove the containers ghost from blocking other interactions on the page
-
-    // delay it to go after the fade/drop animation
-    -webkit-transition: left 0s ease 0.6s;
-    -moz-transition: left 0s ease 0.6s;
-    -ms-transition: left 0s ease 0.6s;
-    -o-transition: left 0s ease 0.6s;
-    transition: left 0s ease 0.6s;
-  }
-
-  .dots-position {
-    -webkit-transition: top 0.3s;
-    -moz-transition: top 0.3s;
-    -ms-transition: top 0.3s;
-    -o-transition: top 0.3s;
-    transition: top 0.3s;
-  }
 
 }
 
-
-
-.active {
-
-}
 
 ///////
 // Container visible animations
@@ -147,6 +122,11 @@ $dot-reverse-delay: 0.4s;
   // no delay, move the dots straight up in to position
   .dots-position {
     top: 0;
+    -webkit-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    -ms-transition: top 0.3s;
+    -o-transition: top 0.3s;
+    transition: top 0.3s;
   }
 
   .arrow-position {
@@ -170,6 +150,23 @@ $dot-reverse-delay: 0.4s;
     -webkit-animation: alignBottomDot 0.6s forwards $dot-reverse-delay;
     -o-animation: alignBottomDot 0.6s forwards $dot-reverse-delay;
     animation: alignBottomDot 0.6s forwards $dot-reverse-delay;
+  }
+
+
+  .top-row-animations {
+    background-color: grey;
+    transition: background-color 0.5s ease;
+  }
+
+  &.actions-container {
+    left: 1000000px; // remove the containers ghost from blocking other interactions on the page
+
+    // delay it to go after the fade/drop animation
+    -webkit-transition: left 0s ease 0.6s;
+    -moz-transition: left 0s ease 0.6s;
+    -ms-transition: left 0s ease 0.6s;
+    -o-transition: left 0s ease 0.6s;
+    transition: left 0s ease 0.6s;
   }
 
 }
