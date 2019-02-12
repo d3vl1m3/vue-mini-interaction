@@ -3,6 +3,7 @@
 ///////
 
 $dot-distance: 1.8rem;
+$dot-reverse-delay: 0.4s;
 
 @keyframes alignTopDot {
   from{margin-bottom: 0}
@@ -50,10 +51,6 @@ $dot-distance: 1.8rem;
   position: relative;
 }
 
-.top-row-animations {
-}
-
-
 .inactive {
   .top-row-animations {
     background-color: grey;
@@ -79,41 +76,11 @@ $dot-distance: 1.8rem;
     transition: top 0.3s;
   }
 
-  .top-dot-animation,
-  .bottom-dot-animation {
-    animation-delay: 2s;
-  }
-
 }
 
 
+
 .active {
-
-  .top-row-animations {
-    background-color: $blue;
-    transition: background-color 1.2s ease;
-  }
-
-  &.actions-container {
-    left: 0; // get container in position
-  }
-
-  .dots-position {
-    -webkit-transition: top 0.3s 0.45s;
-    -moz-transition: top 0.3s 0.45s;
-    -ms-transition: top 0.3s 0.45s;
-    -o-transition: top 0.3s 0.45s;
-    transition: top 0.3s 0.45s;
-  }
-
-  .arrow-position {
-    transition-delay: 0.35s;
-  }
-
-  .actions-container-animation {
-    margin-top: 1rem;
-    opacity: 1;
-  }
 
 }
 
@@ -129,19 +96,44 @@ $dot-distance: 1.8rem;
 
   .arrow-position {
     top: 0;
+    transition-delay: 0.35s;
   }
 
   .top-dot-animation {
     -webkit-animation: alignTopDotReverse 0.7s forwards;
     -o-animation: alignTopDotReverse 0.7s forwards;
     animation: alignTopDotReverse 0.7s forwards;
-    animation-direction: alternate;
   }
 
   .bottom-dot-animation {
     -webkit-animation: alignBottomDotReverse 0.7s forwards;
     -o-animation: alignBottomDotReverse 0.7s forwards;
     animation: alignBottomDotReverse 0.7s forwards;
+  }
+
+
+  .top-row-animations {
+    background-color: $blue;
+    transition: background-color 1.2s ease;
+  }
+
+  // delay the dots moving down out of the way for the arrow
+  .dots-position {
+    -webkit-transition: top 0.3s 0.45s;
+    -moz-transition: top 0.3s 0.45s;
+    -ms-transition: top 0.3s 0.45s;
+    -o-transition: top 0.3s 0.45s;
+    transition: top 0.3s 0.45s;
+  }
+
+  // actions container
+  &.actions-container {
+    left: 0; // get container in position
+  }
+
+  .actions-container-animation {
+    margin-top: 1rem;
+    opacity: 1;
   }
 
 }
@@ -152,6 +144,7 @@ $dot-distance: 1.8rem;
 ///////
 .inactive {
 
+  // no delay, move the dots straight up in to position
   .dots-position {
     top: 0;
   }
@@ -160,18 +153,23 @@ $dot-distance: 1.8rem;
     top: -100%;
   }
 
+  .top-dot-animation,
+  .bottom-dot-animation {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .top-dot-animation {
-    -webkit-animation: alignTopDot 0.6s forwards;
-    -o-animation: alignTopDot 0.6s forwards;
-    animation: alignTopDot 0.6s forwards;
-    animation-direction: alternate;
+    -webkit-animation: alignTopDot 0.6s forwards $dot-reverse-delay;
+    -o-animation: alignTopDot 0.6s forwards $dot-reverse-delay;
+    animation: alignTopDot 0.6s forwards $dot-reverse-delay;
 
   }
 
   .bottom-dot-animation {
-    -webkit-animation: alignBottomDot 0.6s forwards;
-    -o-animation: alignBottomDot 0.6s forwards;
-    animation: alignBottomDot 0.6s forwards;
-    animation-direction: alternate;
+    -webkit-animation: alignBottomDot 0.6s forwards $dot-reverse-delay;
+    -o-animation: alignBottomDot 0.6s forwards $dot-reverse-delay;
+    animation: alignBottomDot 0.6s forwards $dot-reverse-delay;
   }
+
 }
