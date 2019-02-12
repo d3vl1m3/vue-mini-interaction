@@ -5,7 +5,9 @@
 
               <button class="mini-interaction__action" @click="toggleClicked()" v-bind:class="{'active': clicked, 'inactive': !clicked }" type="button">
 
-                  <span class="mini-interaction__button-label">Actions</span>
+                  <span class="mini-interaction__button-label">
+                      <span v-if="!clicked">Actions</span><span v-else>Cancel</span>
+                  </span>
 
                   <span class="icons__outer-container">
 
@@ -31,7 +33,7 @@
                   <div class="actions__outer-container">
                       <div class="actions__inner-container actions-container-animation">
                             <div class="actions__top-row">
-                                <ul class="top-actions__list">
+                                <ul class="top-actions__list top-row-animations">
                                     <li>
                                         <button>
                                             <i class="fa fa-pencil"></i>

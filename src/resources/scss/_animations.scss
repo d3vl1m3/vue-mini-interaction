@@ -25,6 +25,7 @@ $dot-distance: 1.8rem;
   to{margin-top: 0}
 }
 
+
 ///////
 // defaults
 ///////
@@ -49,8 +50,15 @@ $dot-distance: 1.8rem;
   position: relative;
 }
 
+.top-row-animations {
+}
+
 
 .inactive {
+  .top-row-animations {
+    background-color: grey;
+    transition: background-color 0.5s ease;
+  }
 
   &.actions-container {
     left: 1000000px; // remove the containers ghost from blocking other interactions on the page
@@ -80,6 +88,11 @@ $dot-distance: 1.8rem;
 
 
 .active {
+
+  .top-row-animations {
+    background-color: $blue;
+    transition: background-color 1.2s ease;
+  }
 
   &.actions-container {
     left: 0; // get container in position
