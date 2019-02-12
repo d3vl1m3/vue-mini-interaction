@@ -29,8 +29,12 @@ $dot-distance: 1.8rem;
 // defaults
 ///////
 .actions-container-animation {
+  -webkit-transition: opacity 0.6s ease, margin-top 0.8s ease;
+  -moz-transition: opacity 0.6s ease, margin-top 0.8s ease;
+  -ms-transition: opacity 0.6s ease, margin-top 0.8s ease;
+  -o-transition: opacity 0.6s ease, margin-top 0.8s ease;
   transition: opacity 0.6s ease, margin-top 0.8s ease;
-}
+} 
 
 .arrow-position,
 .dots-position {
@@ -49,11 +53,21 @@ $dot-distance: 1.8rem;
 .inactive {
 
   &.actions-container {
-    left: 1000000px;
-    transition: left 0s ease 0.5s;
+    left: 1000000px; // remove the containers ghost from blocking other interactions on the page
+
+    // delay it to go after the fade/drop animation
+    -webkit-transition: left 0s ease 0.6s;
+    -moz-transition: left 0s ease 0.6s;
+    -ms-transition: left 0s ease 0.6s;
+    -o-transition: left 0s ease 0.6s;
+    transition: left 0s ease 0.6s;
   }
 
   .dots-position {
+    -webkit-transition: top 0.3s;
+    -moz-transition: top 0.3s;
+    -ms-transition: top 0.3s;
+    -o-transition: top 0.3s;
     transition: top 0.3s;
   }
 
@@ -68,10 +82,14 @@ $dot-distance: 1.8rem;
 .active {
 
   &.actions-container {
-    left: 0;
+    left: 0; // get container in position
   }
 
   .dots-position {
+    -webkit-transition: top 0.3s 0.45s;
+    -moz-transition: top 0.3s 0.45s;
+    -ms-transition: top 0.3s 0.45s;
+    -o-transition: top 0.3s 0.45s;
     transition: top 0.3s 0.45s;
   }
 
@@ -101,11 +119,15 @@ $dot-distance: 1.8rem;
   }
 
   .top-dot-animation {
+    -webkit-animation: alignTopDotReverse 0.7s forwards;
+    -o-animation: alignTopDotReverse 0.7s forwards;
     animation: alignTopDotReverse 0.7s forwards;
     animation-direction: alternate;
   }
 
   .bottom-dot-animation {
+    -webkit-animation: alignBottomDotReverse 0.7s forwards;
+    -o-animation: alignBottomDotReverse 0.7s forwards;
     animation: alignBottomDotReverse 0.7s forwards;
   }
 
@@ -126,12 +148,16 @@ $dot-distance: 1.8rem;
   }
 
   .top-dot-animation {
+    -webkit-animation: alignTopDot 0.6s forwards;
+    -o-animation: alignTopDot 0.6s forwards;
     animation: alignTopDot 0.6s forwards;
     animation-direction: alternate;
 
   }
 
   .bottom-dot-animation {
+    -webkit-animation: alignBottomDot 0.6s forwards;
+    -o-animation: alignBottomDot 0.6s forwards;
     animation: alignBottomDot 0.6s forwards;
     animation-direction: alternate;
   }
