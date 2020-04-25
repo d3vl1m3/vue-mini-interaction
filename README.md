@@ -1,4 +1,7 @@
+Note: Project not maintained
+
 # mini-interaction
+
 
 ## Project setup
 ```
